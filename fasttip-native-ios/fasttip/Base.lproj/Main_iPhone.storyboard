@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Dgn-dq-dQU">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="jim-lv-9Oq">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="Dgn-dq-dQU" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rT9-CA-4Bj">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="9wP-rc-Ntx" kind="relationship" relationship="rootViewController" id="ByJ-w8-yyE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CNT-Kz-kN9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-63" y="-185"/>
+        </scene>
+        <!--View Controller - FastTip-->
+        <scene sceneID="AbP-Kd-sPh">
+            <objects>
+                <viewController id="9wP-rc-Ntx" customClass="FTViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="w1q-Oz-JS8"/>
+                        <viewControllerLayoutGuide type="bottom" id="K7O-rb-hjO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Z2b-Og-Upf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="输入计算金额" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1QB-zL-zSl">
+                                <rect key="frame" x="106" y="124" width="103" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="103" id="4bi-SX-cHM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SSc-fJ-ka7">
+                                <rect key="frame" x="124" y="194" width="64" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="计算小费">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapCalculate:" destination="9wP-rc-Ntx" eventType="touchUpInside" id="frj-KA-TF8"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="小费" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YX1-9p-eZM">
+                                <rect key="frame" x="106" y="244" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ADC-NH-UmI">
+                                <rect key="frame" x="178" y="244" width="54" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="总计" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EMj-0y-kWH">
+                                <rect key="frame" x="106" y="285" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X11-RH-fub">
+                                <rect key="frame" x="178" y="285" width="58" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1QB-zL-zSl" firstAttribute="top" secondItem="w1q-Oz-JS8" secondAttribute="bottom" constant="60" id="63S-hd-PcO"/>
+                            <constraint firstItem="1QB-zL-zSl" firstAttribute="leading" secondItem="EMj-0y-kWH" secondAttribute="leading" id="DoQ-xs-Tiy"/>
+                            <constraint firstItem="ADC-NH-UmI" firstAttribute="leading" secondItem="YX1-9p-eZM" secondAttribute="trailing" constant="30" id="E3H-xm-97y"/>
+                            <constraint firstItem="YX1-9p-eZM" firstAttribute="top" secondItem="SSc-fJ-ka7" secondAttribute="bottom" constant="20" id="EGO-ZE-DbQ"/>
+                            <constraint firstItem="1QB-zL-zSl" firstAttribute="leading" secondItem="YX1-9p-eZM" secondAttribute="leading" id="FeR-vr-rKU"/>
+                            <constraint firstItem="X11-RH-fub" firstAttribute="top" secondItem="ADC-NH-UmI" secondAttribute="bottom" constant="20" id="KuW-3R-OVs"/>
+                            <constraint firstAttribute="centerX" secondItem="1QB-zL-zSl" secondAttribute="centerX" id="MSx-3N-fMd"/>
+                            <constraint firstAttribute="centerX" secondItem="SSc-fJ-ka7" secondAttribute="centerX" id="Rk4-iV-toS"/>
+                            <constraint firstItem="SSc-fJ-ka7" firstAttribute="top" secondItem="1QB-zL-zSl" secondAttribute="bottom" constant="40" id="cew-fT-7nC"/>
+                            <constraint firstItem="EMj-0y-kWH" firstAttribute="top" secondItem="YX1-9p-eZM" secondAttribute="bottom" constant="20" id="rSc-KP-g4Q"/>
+                            <constraint firstItem="X11-RH-fub" firstAttribute="leading" secondItem="EMj-0y-kWH" secondAttribute="trailing" constant="30" id="ukm-Zt-Xqe"/>
+                            <constraint firstItem="ADC-NH-UmI" firstAttribute="top" secondItem="SSc-fJ-ka7" secondAttribute="bottom" constant="20" id="x54-uJ-Yed"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="FastTip" id="JBU-RY-DF8">
+                        <barButtonItem key="rightBarButtonItem" title="设置" id="Mxk-ap-MQP">
+                            <connections>
+                                <segue destination="lco-g2-wg0" kind="push" id="Jg2-vq-wTx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="calculateButton" destination="SSc-fJ-ka7" id="r56-NH-xCT"/>
+                        <outlet property="checkAmountTextField" destination="1QB-zL-zSl" id="jBL-zJ-fxp"/>
+                        <outlet property="tipAmountLabel" destination="ADC-NH-UmI" id="qhT-4T-lWd"/>
+                        <outlet property="totalAmountLabel" destination="X11-RH-fub" id="Aan-uJ-pE9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c75-6l-3dc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="453" y="-185"/>
+        </scene>
+        <!--Settings View Controller - 设置-->
+        <scene sceneID="Z2M-F9-JcU">
+            <objects>
+                <viewController id="lco-g2-wg0" customClass="FTSettingsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3YY-MR-CZv"/>
+                        <viewControllerLayoutGuide type="bottom" id="HYu-2F-m80"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Mg1-35-Thh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="输入小费比例" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ceG-Wf-7Q2">
+                                <rect key="frame" x="95" y="104" width="130" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="15" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fAQ-5y-IBe">
+                                <rect key="frame" x="95" y="145" width="57" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yO9-GD-Kul">
+                                <rect key="frame" x="167" y="149" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="在输入框内输入小费比例 点击完成返回" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="211" translatesAutoresizingMaskIntoConstraints="NO" id="DRz-wx-BuB">
+                                <rect key="frame" x="59" y="215" width="211" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yO9-GD-Kul" firstAttribute="leading" secondItem="fAQ-5y-IBe" secondAttribute="trailing" constant="15" id="Jd0-1j-hCk"/>
+                            <constraint firstItem="ceG-Wf-7Q2" firstAttribute="top" secondItem="3YY-MR-CZv" secondAttribute="bottom" constant="40" id="iI4-SX-LW8"/>
+                            <constraint firstItem="DRz-wx-BuB" firstAttribute="top" secondItem="fAQ-5y-IBe" secondAttribute="bottom" constant="40" id="nxS-JM-7I8"/>
+                            <constraint firstItem="fAQ-5y-IBe" firstAttribute="top" secondItem="ceG-Wf-7Q2" secondAttribute="bottom" constant="20" id="wFF-zK-I2o"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="设置" id="Wl2-uR-z80">
+                        <barButtonItem key="rightBarButtonItem" title="完成" id="iji-rv-pku">
+                            <connections>
+                                <action selector="didTapDone:" destination="lco-g2-wg0" id="tlv-HO-oPp"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tipPercentageTextField" destination="fAQ-5y-IBe" id="K3W-bz-LBX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zpj-eH-uQx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="883" y="-185"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
